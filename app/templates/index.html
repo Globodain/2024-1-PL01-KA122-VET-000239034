@@ -21,6 +21,12 @@
                     {{ _('Older posts') }} <span aria-hidden="true">&rarr;</span>
                 </a>
             </li>
+            {% for post in posts %}
+            <li>
+                <h2>{{ post['title'] }}</h2>
+                <p>{{ post['content'] }}</p>
+            </li>
+            {% endfor %}
         </ul>
     </nav>
 {% endblock %}
